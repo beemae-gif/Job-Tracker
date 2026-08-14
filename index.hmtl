@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Medical Job Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+        ✦ Medical Job Tracker ✦
+    </h1>
+
+    <p>
+        Your personal career archive
+    </p>
+
+</header>
+
+
+<main>
+
+
+    <!-- DASHBOARD -->
+
+    <section class="dashboard">
+
+
+        <div class="stat-card">
+
+            <div class="icon">
+                ✦
+            </div>
+
+            <h2 id="applicationCount">
+                0
+            </h2>
+
+            <p>
+                Applications
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="icon">
+                ♡
+            </div>
+
+            <h2 id="interviewCount">
+                0
+            </h2>
+
+            <p>
+                Interviews
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="icon">
+                ★
+            </div>
+
+            <h2 id="offerCount">
+                0
+            </h2>
+
+            <p>
+                Offers
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ADD / EDIT APPLICATION -->
+
+    <section class="application-box">
+
+
+        <h2 id="formTitle">
+            ✦ Add New Application
+        </h2>
+
+
+        <label for="companyInput">
+            Company
+        </label>
+
+        <input
+            id="companyInput"
+            type="text"
+            placeholder="Example: UCHealth"
+        >
+
+
+        <label for="positionInput">
+            Position
+        </label>
+
+        <input
+            id="positionInput"
+            type="text"
+            placeholder="Example: Medical Scheduler"
+        >
+
+
+        <label for="dateInput">
+            Date Applied
+        </label>
+
+        <input
+            id="dateInput"
+            type="date"
+        >
+
+
+        <label for="statusInput">
+            Status
+        </label>
+
+        <select id="statusInput">
+
+            <option value="Interested">
+                Interested
+            </option>
+
+            <option value="Applied" selected>
+                Applied
+            </option>
+
+            <option value="Interview">
+                Interview
+            </option>
+
+            <option value="Offer">
+                Offer
+            </option>
+
+            <option value="Rejected">
+                Rejected
+            </option>
+
+        </select>
+
+
+        <label for="followUpInput">
+            Follow-Up Date
+        </label>
+
+        <input
+            id="followUpInput"
+            type="date"
+        >
+
+
+        <label for="notesInput">
+            Notes
+        </label>
+
+        <textarea
+            id="notesInput"
+            placeholder="Add interview details, contact information, questions to ask, or anything else you want to remember..."
+        ></textarea>
+
+
+        <button
+            id="saveButton"
+            type="button"
+        >
+            ✦ Save Application ✦
+        </button>
+
+
+        <button
+            id="cancelEditButton"
+            type="button"
+            class="cancel-button"
+            hidden
+        >
+            Cancel Edit
+        </button>
+
+
+        <p id="saveMessage"></p>
+
+
+    </section>
+
+
+    <!-- APPLICATIONS -->
+
+    <section class="applications-section">
+
+
+        <h2>
+            ✦ My Applications
+        </h2>
+
+
+        <!-- SEARCH AND STATUS FILTER -->
+
+        <div class="application-filters">
+
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="🔍 Search company or position..."
+            >
+
+
+            <select id="filterStatus">
+
+                <option value="All">
+                    All Applications
+                </option>
+
+                <option value="Interested">
+                    Interested
+                </option>
+
+                <option value="Applied">
+                    Applied
+                </option>
+
+                <option value="Interview">
+                    Interview
+                </option>
+
+                <option value="Offer">
+                    Offer
+                </option>
+
+                <option value="Rejected">
+                    Rejected
+                </option>
+
+            </select>
+
+
+        </div>
+
+
+        <!-- FILTER RESULTS -->
+
+        <p
+            id="filterResults"
+            class="filter-results"
+        ></p>
+
+
+        <!-- APPLICATION LIST -->
+
+        <div id="applicationList"></div>
+
+
+    </section>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
